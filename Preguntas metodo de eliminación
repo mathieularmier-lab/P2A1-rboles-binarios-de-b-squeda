@@ -1,0 +1,37 @@
+1. ¿Por qué la eliminación requiere más casos que la búsqueda?
+
+Porque buscar solamente comprueba si existe un valor. 
+Eliminar, además, debe reorganizar las referencias según el nodo tenga cero, uno o dos hijos.
+
+2. ¿Qué ocurre si el valor no existe?
+
+El método llega a null y no modifica el árbol.
+
+3. ¿Por qué eliminar una hoja es lo más sencillo?
+
+Porque no tiene hijos y podemos eliminarla devolviendo null sin reorganizar otros nodos.
+
+4. ¿Por qué podemos devolver directamente su hijo si solamente tiene uno?
+
+Porque el hijo puede ocupar el lugar del nodo eliminado sin perder los demás elementos del subárbol.
+
+5. ¿Por qué utilizamos el mínimo del subárbol derecho cuando existen dos hijos?
+
+Porque es el menor valor mayor que el nodo que queremos eliminar. Por lo tanto, puede sustituirlo sin alterar el orden del ABB.
+
+6. ¿Por qué eliminamos el valor sustituto de su posición original?
+
+Para evitar que aparezca duplicado en el árbol.
+
+7. ¿Qué ocurriría si no reconectáramos correctamente los subárboles?
+
+Podríamos perder nodos, dejar referencias incorrectas o romper la propiedad de ordenamiento del ABB.
+
+8. ¿Por qué eliminar la raíz puede modificar la variable raiz?
+
+Porque, dependiendo del caso, otro nodo puede ocupar su posición o el árbol puede quedar vacío.
+Por eso utilizamos raiz = eliminarRec(raiz, clave).
+
+9. ¿Qué propiedad debe conservarse después de cualquier eliminación?
+
+Todos los valores del subárbol izquierdo deben seguir siendo menores que su raíz y todos los del derecho deben ser mayores.
