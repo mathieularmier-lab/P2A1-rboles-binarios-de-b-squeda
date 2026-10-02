@@ -1,0 +1,31 @@
+private Nodo eliminarRec(Nodo raiz, int clave) {
+
+    if (raiz == null)
+        return null;
+
+    // Buscar el nodo que queremos eliminar
+    if (clave < raiz.clave) {
+        raiz.izquierdo = eliminarRec(raiz.izquierdo, clave);
+    }
+    else if (clave > raiz.clave) {
+        raiz.derecho = eliminarRec(raiz.derecho, clave);
+    }
+    else {
+
+        // Caso 1: hoja, o caso 2: un solo hijo
+        if (raiz.izquierdo == null)
+            return raiz.derecho;
+
+        if (raiz.derecho == null)
+            return raiz.izquierdo;
+
+        // Caso 3: el nodo tiene dos hijos
+        int sustituto = encontrarMinimo(raiz.derecho);
+
+        raiz.clave = sustituto;
+
+        raiz.derecho = eliminarRec(raiz.derecho, sustituto);
+    }
+
+    return raiz;
+}
