@@ -1,0 +1,21 @@
+¿Por qué no es necesario recorrer todos los nodos?
+
+Porque el ABB está organizado. Si el valor que buscamos es menor que el nodo actual, 
+solamente buscamos a la izquierda; si es mayor, buscamos a la derecha. Así descartamos subárboles com
+
+Si buscamos 40, ¿qué nodos visitamos?
+
+50 → 30 → 40
+
+Si buscamos 90, ¿cuándo sabemos que no existe?
+
+El recorrido sería 50 → 70 → 80. 
+Después intentamos ir hacia el hijo derecho de 80 y encontramos null. Eso indica que 90 no existe en el árbol.
+
+¿Qué devuelve el caso base cuando el nodo es null?
+
+Devuelve false, porque no encontramos el valor.
+
+¿Qué pasaría si no respetáramos la regla menor-izquierda y mayor-derecha?
+
+La búsqueda podría dirigirse al subárbol equivocado y devolver false aunque el valor estuviera presente.
