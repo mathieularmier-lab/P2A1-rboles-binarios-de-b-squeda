@@ -1,0 +1,24 @@
+2. ¿Qué propiedad debe cumplir todo ABB?
+
+Los valores menores que un nodo deben estar en su subárbol izquierdo y los mayores en su subárbol derecho. 
+Esta propiedad debe cumplirse en todos los nodos.
+
+3. ¿Cuál es la raíz?
+
+El nodo 50.
+
+4. ¿Qué nodos son hojas?
+
+20, 40, 60 y 80, porque no tienen hijos.
+
+5. ¿Qué valores pertenecen a cada subárbol de 50?
+
+Izquierdo: 30, 20 y 40.
+Derecho: 70, 60 y 80.
+
+6. ¿Qué secuencia produce el recorrido inorden?
+
+20, 30, 40, 50, 60, 70, 80.
+El recorrido inorden visita primero el subárbol izquierdo, después la raíz y finalmente el subárbol derecho. 
+Por eso, en un ABB, obtenemos los elementos de menor a mayor.
+
