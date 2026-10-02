@@ -1,0 +1,23 @@
+1. ¿Cómo ayuda el recorrido inorden a comprobar que el ABB conserva su estructura?
+
+Me permite comprobar que los valores siguen apareciendo de menor a mayor después de las eliminaciones. 
+También debo verificar que no falte ningún valor que debería permanecer.
+
+2. ¿Qué caso de eliminación consideraste más difícil?
+
+El de un nodo con dos hijos, porque debemos buscar un sustituto, copiar su valor 
+y eliminarlo de su posición original sin perder los demás nodos.
+
+3. ¿Qué papel cumple la recursividad en la búsqueda y eliminación?
+
+Permite repetir el mismo procedimiento en subárboles cada vez más pequeños hasta encontrar el valor o llegar a null.
+
+4. ¿Qué aprendiste sobre el cambio de referencias entre nodos?
+
+Aprendí que, al eliminar un nodo, debemos actualizar las referencias para mantener conectados sus hijos 
+y conservar la estructura del árbol.
+
+5. ¿Cómo explicarías a un compañero la diferencia entre buscar y eliminar?
+
+La búsqueda solamente localiza un valor y devuelve si existe o no. 
+La eliminación también lo localiza, pero después debe modificar las conexiones del árbol según la cantidad de hijos del nodo.
