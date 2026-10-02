@@ -1,0 +1,13 @@
+private boolean buscarRec(Nodo raiz, int clave) {
+
+    if (raiz == null)
+        return false;
+
+    if (clave == raiz.clave)
+        return true;
+
+    if (clave < raiz.clave)
+        return buscarRec(raiz.izquierdo, clave);
+
+    return buscarRec(raiz.derecho, clave);
+}
